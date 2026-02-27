@@ -1,9 +1,9 @@
 import streamlit as st
 import os
-from utils.speech_to_text import transcribe_audio
-from utils.text_cleaner import clean_transcript
-from utils.summarizer import generate_summary, convert_to_bullets
-from utils.quiz_generator import generate_mcqs
+from speech_to_text import transcribe_audio
+from text_cleaner import clean_transcript
+from summarizer import generate_summary, convert_to_bullets
+from quiz_generator import generate_mcqs
 
 st.set_page_config(page_title="Lecture Voice to Notes", layout="centered")
 
@@ -97,4 +97,5 @@ if uploaded_file is not None:
                     if selected == mcq["answer"]:
                         st.success("Correct ✅")
                     else:
+
                         st.error(f"Wrong ❌ | Correct Answer: {mcq['answer']}")
