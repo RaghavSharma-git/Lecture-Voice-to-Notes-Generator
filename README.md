@@ -138,9 +138,6 @@ Score tracking dashboard
 
 Cloud deployment
 
-📸 Screenshots
-
-(Add screenshots of your app here)
 
 🔗 Deployment
 
