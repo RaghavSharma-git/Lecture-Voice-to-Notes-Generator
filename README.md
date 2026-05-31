@@ -1,59 +1,107 @@
-🎙️ AI-Powered Lecture Voice-to-Notes Generator
+# 🎙️ AI-Powered Lecture Voice-to-Notes Generator
 
-An AI-based web application that converts lecture audio into structured study material including cleaned transcripts, AI-generated summaries, exam-ready bullet notes, and interactive MCQs.
+<div align="center">
 
-Built using Speech Recognition + NLP + Streamlit.
+![Python](https://img.shields.io/badge/Python-3.10+-blue?style=for-the-badge\&logo=python)
+![Streamlit](https://img.shields.io/badge/Streamlit-Web%20App-red?style=for-the-badge\&logo=streamlit)
+![Whisper](https://img.shields.io/badge/OpenAI-Whisper-green?style=for-the-badge)
+![Transformers](https://img.shields.io/badge/HuggingFace-Transformers-yellow?style=for-the-badge)
+![Status](https://img.shields.io/badge/Status-Active-success?style=for-the-badge)
 
-🚀 Features
+### 🎧 Transform Lecture Audio into Notes, Summaries & MCQs with AI
 
-🎧 Upload lecture audio (.mp3 / .wav)
+🔗 **Live Demo:** https://lecture-voice-to-notes-generator-p3ccpai8hikso4oiohhx4f.streamlit.app/
 
-🧠 Speech-to-text using OpenAI Whisper
+🔗 **GitHub Repository:** https://github.com/RaghavSharma-git/Lecture-Voice-to-Notes-Generator
 
-🧹 Automatic transcript cleaning
+</div>
 
-📌 AI-powered summary generation
+---
 
-📋 Exam-ready bullet notes
+## 📖 Overview
 
-📝 Interactive MCQs for practice
+**Lecture Voice-to-Notes Generator** is an AI-powered educational tool that helps students convert lecture recordings into structured learning materials.
 
-🌐 Clean web interface using Streamlit
+Simply upload a lecture audio file and the application automatically:
 
-🏗️ System Architecture
+✅ Transcribes speech to text
 
-Audio Input
-↓
-Whisper (Speech-to-Text)
-↓
-Text Cleaning (Regex-based NLP)
-↓
-Transformer-based Summarization
-↓
-Bullet Note Conversion
-↓
-MCQ Generation
+✅ Cleans noisy transcripts
 
-🛠️ Tech Stack
-Frontend
+✅ Generates concise summaries
 
-Streamlit
+✅ Creates exam-ready bullet notes
 
-Backend
+✅ Produces interactive MCQs for revision
 
-Python
+This eliminates manual note-taking and helps students revise faster.
 
-AI / NLP
+---
 
-OpenAI Whisper (Speech Recognition)
+## ✨ Features
 
-HuggingFace Transformers (Summarization)
+| Feature                | Description                                    |
+| ---------------------- | ---------------------------------------------- |
+| 🎙️ Speech-to-Text     | Converts lecture audio into text using Whisper |
+| 🧹 Transcript Cleaning | Removes noise and improves readability         |
+| 📌 Smart Summaries     | Extracts important concepts automatically      |
+| 📋 Bullet Notes        | Generates structured study notes               |
+| 📝 MCQ Generator       | Creates quiz questions from lecture content    |
+| 🌐 Streamlit UI        | Clean and responsive web interface             |
 
-Torch
+---
 
-Regex (Text Cleaning)
+---
 
-📂 Project Structure
+# 🏗️ System Architecture
+
+```text
+         🎧 Lecture Audio
+                  │
+                  ▼
+      🎙️ OpenAI Whisper
+      (Speech-to-Text)
+                  │
+                  ▼
+        🧹 Text Cleaning
+          (Regex NLP)
+                  │
+                  ▼
+    📌 AI Summarization Model
+                  │
+        ┌─────────┴─────────┐
+        ▼                   ▼
+ 📋 Bullet Notes      📝 MCQs
+        │                   │
+        └─────────┬─────────┘
+                  ▼
+        🌐 Streamlit UI
+```
+
+---
+
+# 🛠️ Tech Stack
+
+## Frontend
+
+* Streamlit
+
+## Backend
+
+* Python
+
+## AI / NLP
+
+* OpenAI Whisper
+* HuggingFace Transformers
+* PyTorch
+* Regex Processing
+
+---
+
+# 📂 Project Structure
+
+```bash
 lecture-voice-to-notes/
 │
 ├── app.py
@@ -67,94 +115,151 @@ lecture-voice-to-notes/
     ├── text_cleaner.py
     ├── summarizer.py
     └── quiz_generator.py
-⚙️ Installation & Setup
-1️⃣ Clone Repository
-git clone https://github.com/your-username/lecture-voice-to-notes.git
-cd lecture-voice-to-notes
-2️⃣ Create Virtual Environment
-python -m venv venv
-venv\Scripts\activate   # Windows
-3️⃣ Install Dependencies
-pip install -r requirements.txt
-4️⃣ Install FFmpeg (Required for Whisper)
+```
 
-Download FFmpeg from:
+---
+
+# ⚙️ Installation
+
+## 1️⃣ Clone Repository
+
+```bash
+git clone https://github.com/RaghavSharma-git/Lecture-Voice-to-Notes-Generator.git
+
+cd Lecture-Voice-to-Notes-Generator
+```
+
+## 2️⃣ Create Virtual Environment
+
+```bash
+python -m venv venv
+```
+
+### Windows
+
+```bash
+venv\Scripts\activate
+```
+
+### Linux / Mac
+
+```bash
+source venv/bin/activate
+```
+
+---
+
+## 3️⃣ Install Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+## 4️⃣ Install FFmpeg
+
+Download:
+
 https://www.gyan.dev/ffmpeg/builds/
 
-Add bin folder to system PATH.
+Verify installation:
 
-Verify:
-
+```bash
 ffmpeg -version
-5️⃣ Run Application
+```
+
+---
+
+## 5️⃣ Run Application
+
+```bash
 streamlit run app.py
-📊 How It Works
+```
 
-User uploads lecture audio
+---
 
-Whisper converts speech → text
+# 🔄 Workflow
 
-Transcript is cleaned
+```mermaid
+flowchart TD
 
-Transformer model generates summary
+A[Upload Lecture Audio]
+--> B[Whisper Speech To Text]
 
-Summary converted into bullet notes
+B --> C[Transcript Cleaning]
 
-MCQs generated dynamically
+C --> D[AI Summary Generation]
 
-User interacts with quiz
+D --> E[Bullet Notes]
 
-🎯 Use Cases
+E --> F[MCQ Generation]
 
-Students who struggle with note-taking
+F --> G[Student Revision]
+```
 
-Quick revision from long lectures
+---
 
-Self-assessment using generated MCQs
+# 🎯 Use Cases
 
-Educational AI experimentation
+🎓 Students who miss lectures
 
-⚠️ Limitations
+📚 Fast revision before exams
 
-MCQs are rule-based (not fully semantic)
+📝 Automatic note generation
 
-Very long audio may slow processing
+🧠 Self-assessment through MCQs
 
-Performance depends on hardware
+🤖 AI & NLP educational projects
 
-Accuracy depends on audio quality
+---
 
-🔮 Future Improvements
+# ⚠️ Limitations
 
-Intelligent MCQ generation using LLMs
+* MCQs are currently rule-based
+* Processing time increases for long recordings
+* Performance depends on device specifications
+* Accuracy depends on audio quality
 
-Difficulty selection for quizzes
+---
 
-Multilingual support
+# 🚀 Future Improvements
 
-Live lecture recording
+* 🤖 LLM-powered MCQ generation
+* 🌍 Multilingual support
+* 🎯 Difficulty levels
+* 🎙️ Live lecture recording
+* 📊 Student analytics dashboard
+* ☁️ Advanced cloud deployment
 
-Score tracking dashboard
+---
 
-Cloud deployment
+# 🌐 Deployment
 
+### Live Demo
 
-🔗 Deployment
+https://lecture-voice-to-notes-generator-p3ccpai8hikso4oiohhx4f.streamlit.app/
 
-Streamlit Cloud / Local Deployment
+---
 
-📚 References
+# 📚 References
 
-OpenAI Whisper Documentation
+* OpenAI Whisper Documentation
+* HuggingFace Transformers Documentation
+* Streamlit Documentation
+* Python Documentation
 
-HuggingFace Transformers Documentation
+---
 
-Streamlit Documentation
+# 👨‍💻 Author
 
-Python Official Documentation
+### Raghav Sharma
 
-👨‍💻 Author
+🎓 BCA Student
 
-Raghav Sharma
-BCA Student
-AI & NLP Enthusiast
+🤖 AI & NLP Enthusiast
+
+💻 Passionate about Machine Learning & Educational Technology
+
+⭐ If you found this project useful, consider giving it a star!
+
